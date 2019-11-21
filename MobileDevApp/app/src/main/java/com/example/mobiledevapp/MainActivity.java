@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.mobiledevapp.ui.login.LoginActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.smalltalkapp.extra.MESSAGE";
@@ -42,9 +44,18 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_background:
                 //launchBackground();
                 break;
+            case  R.id.action_login:
+                launchLogin();
+                break;
 
         }
         return  super.onOptionsItemSelected(item);
+    }
+
+    private void launchLogin() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.putExtra(EXTRA_MESSAGE,listOptions);
+        startActivityForResult(intent, BOOL_REQUEST);
     }
 
     private void launchSettings() {
