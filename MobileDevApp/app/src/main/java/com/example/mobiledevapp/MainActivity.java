@@ -47,9 +47,18 @@ public class MainActivity extends AppCompatActivity {
             case  R.id.action_login:
                 launchLogin();
                 break;
+            case  R.id.action_calender:
+                launchCalender();
+                break;
 
         }
         return  super.onOptionsItemSelected(item);
+    }
+
+    private void launchCalender() {
+        Intent intent = new Intent(this, CalenderActivity.class);
+        intent.putExtra(EXTRA_MESSAGE,listOptions);
+        startActivityForResult(intent, BOOL_REQUEST);
     }
 
     private void launchLogin() {
