@@ -2,9 +2,11 @@ package com.example.mobiledevapp.ui.login;
 
 import android.app.Activity;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -29,6 +31,9 @@ import com.example.mobiledevapp.ui.login.LoginViewModelFactory;
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
+
+    public boolean[] listOptions;
+    public static final String EXTRA_REPLY = "com.example.smalltalkapp.extra.REPLY";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -117,6 +122,13 @@ public class LoginActivity extends AppCompatActivity {
                         passwordEditText.getText().toString());
             }
         });
+
+
+        //Toolbar
+        Toolbar myToolbar = findViewById(R.id.toolbar_login); //Shows name of app in the toolbar.
+        setSupportActionBar(myToolbar);
+        assert getSupportActionBar() != null;   //null check
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);   //show back button
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
@@ -127,5 +139,14 @@ public class LoginActivity extends AppCompatActivity {
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        Intent replyIntent = new Intent();
+        replyIntent.putExtra(EXTRA_REPLY, listOptions);
+        setResult(RESULT_OK, replyIntent);
+        finish();
+        return true;
     }
 }
