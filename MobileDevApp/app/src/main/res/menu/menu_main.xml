@@ -2,6 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item
+        android:id="@+id/action_login"
+        app:showAsAction="never"
+        android:title="@string/action_login" />
+    <item
+        android:id="@+id/action_calender"
+        app:showAsAction="never"
+        android:title="@string/action_calender" />
 
     <item
         android:id="@+id/action_settings"
@@ -10,6 +18,6 @@
     <item
         android:id="@+id/action_background"
         app:showAsAction="never"
-        android:title="@string/achtergrond" />
+        android:title="@string/action_achtergrond" />
 
 </menu>

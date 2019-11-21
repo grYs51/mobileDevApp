@@ -30,6 +30,8 @@ public class SettingsActivity extends AppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.settings, new SettingsFragment())
                 .commit();
+
+        //Toolbar
         Toolbar myToolbar = findViewById(R.id.toolbar_settings); //Shows name of app in the toolbar.
         setSupportActionBar(myToolbar);
         assert getSupportActionBar() != null;   //null check
