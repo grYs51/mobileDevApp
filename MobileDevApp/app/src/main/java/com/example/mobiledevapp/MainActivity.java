@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_background:
                 //launchBackground();
                 break;
+            case R.id.action_soundboard:
+                launchSoundboard();
+                break;
 
 
         }
@@ -54,6 +57,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void launchSettings() {
         Intent intent = new Intent(this,SettingsActivity.class);
+        intent.putExtra(EXTRA_MESSAGE,listOptions);
+        startActivityForResult(intent, BOOL_REQUEST);
+    }
+    private void launchSoundboard() {
+        Intent intent = new Intent(this,SoundBoardActivity.class);
         intent.putExtra(EXTRA_MESSAGE,listOptions);
         startActivityForResult(intent, BOOL_REQUEST);
     }

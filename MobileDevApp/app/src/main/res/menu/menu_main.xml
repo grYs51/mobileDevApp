@@ -10,5 +10,8 @@
         android:id="@+id/action_background"
         app:showAsAction="never"
         android:title="@string/action_achtergrond" />
-
+    <item
+        android:id="@+id/action_soundboard"
+        app:showAsAction="never"
+        android:title="Soundboard" />
 </menu>

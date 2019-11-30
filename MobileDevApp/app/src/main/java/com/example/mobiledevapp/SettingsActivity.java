@@ -3,7 +3,6 @@ package com.example.mobiledevapp;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.preference.PreferenceFragmentCompat;
@@ -12,13 +11,12 @@ public class SettingsActivity extends AppCompatActivity {
 
 
     public boolean[] listOptions;
-
     public static final String EXTRA_REPLY = "com.example.smalltalkapp.extra.REPLY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings_activity);
+        setContentView(R.layout.activity_settings);
 
 
         Intent intent = getIntent();
