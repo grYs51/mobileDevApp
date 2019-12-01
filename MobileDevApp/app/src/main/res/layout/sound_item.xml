@@ -3,29 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ImageView
+        android:id="@+id/ImageViewItem"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/ImageViewItem"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/buttonp"
-
-        />
-
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:src="@drawable/buttonp" />
 
     <TextView
-        android:text="Hallo wereld!"
+
+        android:id="@+id/TextViewItem"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:id="@+id/TextViewItem"
         android:layout_below="@id/ImageViewItem"
-        android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:textAlignment="gravity"
-        android:textSize="13sp"
+        android:textAllCaps="false"
         android:textColor="@color/Grijs"
-        android:textAllCaps="false"/>
+        android:textSize="13sp" />
 
 
 </RelativeLayout>
