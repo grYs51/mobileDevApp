@@ -9,14 +9,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 public class SoundBoardActivity extends AppCompatActivity {
 
     public boolean[] listOptions;
     public static final String EXTRA_REPLY = "com.example.smalltalkapp.extra.REPLY";
 
-
-    String[] soundList = {"test1", "test2", "test3"};
+    ArrayList<SoundObject> soundList = new ArrayList<SoundObject>();
 
     RecyclerView SoundView;
     SoundboardRecyclerAdapter SoundAdapter = new SoundboardRecyclerAdapter(soundList);
@@ -32,7 +35,14 @@ public class SoundBoardActivity extends AppCompatActivity {
         assert getSupportActionBar() != null;   //null check
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        SoundView = (RecyclerView) findViewById(R.id.soundboardRecyclerView);
+        List<String> nameList = Arrays.asList(getResources().getStringArray(R.array.soundNames)); //Array van button namen opvragen
+
+        SoundObject[] soundItems = {new SoundObject(nameList.get(0), R.raw.audio01), new SoundObject(nameList.get(1), R.raw.audio02), new SoundObject(nameList.get(2), R.raw.audio03)};
+
+        soundList.addAll(Arrays.asList(soundItems)); //items van hierboven in de lijst plaatsen
+
+
+        SoundView = findViewById(R.id.soundboardRecyclerView);
 
         SoundLayoutManager = new GridLayoutManager(this, 3);
         SoundView.setLayoutManager(SoundLayoutManager);
@@ -40,6 +50,12 @@ public class SoundBoardActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventHandlerClass.releaseMediaPlayer();
     }
 
     @Override

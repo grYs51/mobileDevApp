@@ -7,13 +7,17 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRecyclerAdapter.SoundBoardViewHolder> {
 
-    private String[] soundObjects;
-    public SoundboardRecyclerAdapter(String[] SoundObjects){
+    private ArrayList<SoundObject> soundObjects;
+
+    public SoundboardRecyclerAdapter(ArrayList<SoundObject> SoundObjects){
         this.soundObjects = SoundObjects;
-    };
-@Override
+    }
+
+    @Override
     public SoundBoardViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
 
     View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.sound_item,null);
@@ -24,13 +28,24 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
 @Override
     public void onBindViewHolder(SoundBoardViewHolder holder, int position){
 
-    holder.itemTextView.setText(soundObjects[position]);
+        final SoundObject tempObject = soundObjects.get(position);
+        final Integer soundID = tempObject.getItemID();
+
+
+        holder.itemTextView.setText(tempObject.getItemName());
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+                EventHandlerClass.startMediaPlayer(v,soundID);
+            }
+        });
 }
 
 @Override
     public  int getItemCount(){
 
-    return soundObjects.length;
+    return soundObjects.size();
 }
 
 public class SoundBoardViewHolder extends RecyclerView.ViewHolder {
@@ -39,7 +54,7 @@ public class SoundBoardViewHolder extends RecyclerView.ViewHolder {
 
     public SoundBoardViewHolder(View itemView) {
         super(itemView);
-        itemTextView = (TextView) itemView.findViewById(R.id.TextViewItem);
+        itemTextView = itemView.findViewById(R.id.TextViewItem);
     }
 }
 }
