@@ -37,7 +37,10 @@ public class SoundBoardActivity extends AppCompatActivity {
 
         List<String> nameList = Arrays.asList(getResources().getStringArray(R.array.soundNames)); //Array van button namen opvragen
 
-        SoundObject[] soundItems = {new SoundObject(nameList.get(0), R.raw.audio01), new SoundObject(nameList.get(1), R.raw.audio02), new SoundObject(nameList.get(2), R.raw.audio03)};
+        SoundObject[] soundItems = {new SoundObject(nameList.get(0), R.raw.audio01),
+                new SoundObject(nameList.get(1), R.raw.audio02),
+                new SoundObject(nameList.get(2), R.raw.audio03),
+                new SoundObject(nameList.get(3), R.raw.audio04)};
 
         soundList.addAll(Arrays.asList(soundItems)); //items van hierboven in de lijst plaatsen
 

@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_settings:
                 launchSettings();
                 break;
-            case R.id.action_background:
-                //launchBackground();
-                break;
+//            case R.id.action_background:
+//                //launchBackground();
+//                break;
             case R.id.action_soundboard:
                 launchSoundboard();
                 break;
