@@ -40,7 +40,20 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
                 EventHandlerClass.startMediaPlayer(v,soundID);
             }
         });
+
+
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                EventHandlerClass.popupManager(v , tempObject);
+                return true;
+            }
+        });
 }
+
+
+
+
 
 @Override
     public  int getItemCount(){

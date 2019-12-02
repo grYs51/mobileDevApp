@@ -3,6 +3,7 @@ package com.example.mobiledevapp;
 import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.View;
+import android.widget.PopupMenu;
 
 public class EventHandlerClass {
 
@@ -31,6 +32,13 @@ public class EventHandlerClass {
             mp.release();
             mp = null;
         }
+    }
+
+    public static void popupManager(final View view, final SoundObject soundObject){
+        PopupMenu popup = new PopupMenu(view.getContext(),view);
+        popup.getMenuInflater().inflate(R.menu.longclick,popup.getMenu());
+
+        popup.show();
     }
 
 }

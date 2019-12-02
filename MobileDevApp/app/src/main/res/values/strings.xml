@@ -32,4 +32,10 @@
         <item>Kendrick</item>
         <item>OOF</item>
     </string-array>
+
+
+    <string name="action_send">Share</string>
+    <string name="action_ringtone">Save as...</string>
+    <string name="action_favourite">Add Favourite</string>
+
 </resources>
