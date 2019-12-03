@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 
@@ -15,9 +16,12 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.smalltalkapp.extra.MESSAGE";
+    public static int counter;
     public boolean[] listOptions={true,true,true};
     public static final int BOOL_REQUEST = 1;
     private FirebaseAnalytics mFirebaseAnalytics;
+
+    public static TextView tvCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(myToolbar);
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
+         tvCounter = findViewById(R.id.tvCounter);
+        tvCounter.setText("0");
     }
 
 

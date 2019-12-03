@@ -38,6 +38,8 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
             public void onClick(View v){
 
                 EventHandlerClass.startMediaPlayer(v,soundID);
+                MainActivity.counter = MainActivity.counter + 1;
+                MainActivity.tvCounter.setText(String.valueOf(MainActivity.counter));
             }
         });
 }
