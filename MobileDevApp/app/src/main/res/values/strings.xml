@@ -23,4 +23,13 @@
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
     <string name="action_soundboard" type="id">Soundboard</string>
+
+
+    <!-- Naam van buttons -->
+    <string-array name="soundNames">
+        <item>BITCONNEEEEEEEEEEECT</item>
+        <item>Jump</item>
+        <item>Kendrick</item>
+        <item>OOF</item>
+    </string-array>
 </resources>

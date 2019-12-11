@@ -19,4 +19,13 @@
 
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_soundboard"
+        android:id="@+id/soundboardRecyclerView"
+        />
 </RelativeLayout>
