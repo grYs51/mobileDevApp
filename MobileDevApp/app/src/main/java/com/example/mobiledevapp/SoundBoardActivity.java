@@ -50,6 +50,13 @@ public class SoundBoardActivity extends AppCompatActivity {
                 new SoundObject(nameList.get(12), R.raw.suprisemotherfcker),
                 new SoundObject(nameList.get(13), R.raw.tadaah),
                 new SoundObject(nameList.get(14), R.raw.youneedtostfu),
+                new SoundObject(nameList.get(15), R.raw.airhornsonata),
+                new SoundObject(nameList.get(16), R.raw.damnsonwheredyouthis),
+                new SoundObject(nameList.get(17), R.raw.hit),
+                new SoundObject(nameList.get(18), R.raw.neverdonethat),
+                new SoundObject(nameList.get(19), R.raw.sanic),
+                new SoundObject(nameList.get(20), R.raw.shotsfired),
+                new SoundObject(nameList.get(21), R.raw.wow),
 
 
         };
