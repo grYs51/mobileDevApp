@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         return  super.onOptionsItemSelected(item);
     }
 
+
     public void logEvent (String name){
         Bundle bundle = new Bundle();
         bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
