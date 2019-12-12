@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
          tvCounter = findViewById(R.id.tvCounter);
-        tvCounter.setText("0");
+        tvCounter.setText(String.valueOf(counter));
     }
 
 

@@ -3,10 +3,9 @@
     <string name="achtergrond">Achtergrond</string>
     <string name="action_settings">Instellingen</string>
     <string name="title_activity_settings">Settings</string>
-    <string name="Title_activity_soundboard">Sounds</string>
     <string name="action_login">Login</string>
     <string name="action_achtergrond">Achtergrond</string>
-
+    <string name="Title_activity_soundboard">Sounds</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Stats</string>
@@ -21,9 +20,10 @@
     <string name="attachment_title">Dark mode</string>
     <string name="attachment_summary_on">Dark Mode On
     </string>
-    <string name="attachment_summary_off">Dark Mode off</string>
+    <string name="attachment_summary_off">Dark Mode Off</string>
 
     <string name="action_soundboard" type="id">Soundboard</string>
+
 
 
     <!-- Naam van buttons -->

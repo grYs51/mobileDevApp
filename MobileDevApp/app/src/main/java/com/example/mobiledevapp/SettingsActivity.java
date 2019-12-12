@@ -17,13 +17,8 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
-
         Intent intent = getIntent();
         listOptions = intent.getBooleanArrayExtra(MainActivity.EXTRA_MESSAGE);
-
-
-
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.settings, new SettingsFragment())
@@ -42,6 +37,8 @@ public class SettingsActivity extends AppCompatActivity {
             setPreferencesFromResource(R.xml.root_preferences, rootKey);
         }
     }
+
+
     @Override
     public boolean onSupportNavigateUp() {
         Intent replyIntent = new Intent();
