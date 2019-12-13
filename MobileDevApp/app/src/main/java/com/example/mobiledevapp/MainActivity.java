@@ -18,7 +18,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "com.example.smalltalkapp.extra.MESSAGE";
+    public static final String EXTRA_MESSAGE = "com.example.mobiledevapp.extra.MESSAGE";
     public static int counter;
     public static SharedPreferences settings;
     private String sharedPrefFile = "com.example.mobiledevapp";
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     public static TextView tvCounter;
 
 
-    public static void saveCount() {
+    public static void saveCount() { //Dit crasht de app
 
 
         counter = counter + 1;
@@ -59,11 +59,11 @@ public class MainActivity extends AppCompatActivity {
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
-        SharedPreferences settings = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+        settings = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
         counter = settings.getInt("counter", 0);
 
          tvCounter = findViewById(R.id.tvCounter);
-        tvCounter.setText(Integer.toString(counter)  );
+        tvCounter.setText(Integer.toString(counter));
     }
 
 

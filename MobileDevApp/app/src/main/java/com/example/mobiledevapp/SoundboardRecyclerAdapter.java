@@ -42,7 +42,7 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
             public void onClick(View v){
 
                 EventHandlerClass.startMediaPlayer(v,soundID);
-                MainActivity.saveCount();
+                MainActivity.saveCount(); //APP CRASH
 
             }
         });
