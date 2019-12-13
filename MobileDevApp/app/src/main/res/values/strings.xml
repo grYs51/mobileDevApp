@@ -23,6 +23,10 @@
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
     <string name="action_soundboard" type="id">Soundboard</string>
+    <string name="logo">logo</string>
+    <string name="naar_soundboard">Naar Soundboard</string>
+    <string name="x_afgespeeld">Aantal geluiden afgespeeld:</string>
+    <string name="instellingen">instellingen</string>
 
 
     <!-- Naam van buttons -->

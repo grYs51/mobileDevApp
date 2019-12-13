@@ -5,9 +5,11 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -82,5 +84,16 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,SoundBoardActivity.class);
         intent.putExtra(EXTRA_MESSAGE,listOptions);
         startActivityForResult(intent, BOOL_REQUEST);
+    }
+
+
+    public void goToSoundBoard(View view) {
+        Intent intent = new Intent(this,SoundBoardActivity.class);
+        startActivityForResult(intent,BOOL_REQUEST);
+    }
+
+    public void goToSettings(View view) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivityForResult(intent,BOOL_REQUEST);
     }
 }
