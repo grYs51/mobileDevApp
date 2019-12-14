@@ -1,5 +1,7 @@
 package com.example.mobiledevapp;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +10,8 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRecyclerAdapter.SoundBoardViewHolder> {
 
@@ -38,8 +42,8 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
             public void onClick(View v){
 
                 EventHandlerClass.startMediaPlayer(v,soundID);
-                MainActivity.counter = MainActivity.counter + 1;
-                MainActivity.tvCounter.setText(String.valueOf(MainActivity.counter));
+                MainActivity.saveCount(); //APP CRASH
+
             }
         });
 }
