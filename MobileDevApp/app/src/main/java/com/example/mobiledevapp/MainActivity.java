@@ -37,14 +37,10 @@ public class MainActivity extends AppCompatActivity {
     public static TextView tvCounter;
 
 
-    public static void saveCount() { //Dit crasht de app
-
-
+    public static void saveCount() {
         counter = counter + 1;
-
         SharedPreferences.Editor editor = settings.edit();
         editor.putInt("counter", counter);
-
         editor.commit();
         MainActivity.tvCounter.setText(Integer.toString(counter));
 
