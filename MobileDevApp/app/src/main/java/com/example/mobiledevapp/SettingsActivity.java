@@ -2,6 +2,8 @@ package com.example.mobiledevapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -13,6 +15,8 @@ public class SettingsActivity extends AppCompatActivity {
     public boolean[] listOptions;
     public static final String EXTRA_REPLY = "com.example.smalltalkapp.extra.REPLY";
 
+    Button btnResetCounter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +27,14 @@ public class SettingsActivity extends AppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.settings, new SettingsFragment())
                 .commit();
+
+        btnResetCounter = (Button) findViewById(R.id.CounterResetButton);
+        btnResetCounter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         //Toolbar
         Toolbar myToolbar = findViewById(R.id.toolbar_settings); //Shows name of app in the toolbar.
