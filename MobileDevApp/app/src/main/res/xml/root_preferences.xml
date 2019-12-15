@@ -26,7 +26,7 @@
 
         <Preference
             android:id="@+id/CounterResetButton"
-            app:key="Reset"
+            app:key="@string/reset"
             app:title="@string/ResetCounter" />
 
     </PreferenceCategory>
