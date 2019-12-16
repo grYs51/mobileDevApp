@@ -2,12 +2,16 @@ package com.example.mobiledevapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
 
+import android.widget.Button;
+import android.widget.SearchView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -17,11 +21,12 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "com.example.smalltalkapp.extra.MESSAGE";
+    public static final String EXTRA_MESSAGE = "com.example.mobiledevapp.extra.MESSAGE";
     public static int counter;
     public boolean[] listOptions={true,true,true};
     public static final int BOOL_REQUEST = 1;
     private FirebaseAnalytics mFirebaseAnalytics;
+
 
     public static TextView tvCounter;
 
@@ -36,7 +41,24 @@ public class MainActivity extends AppCompatActivity {
 
          tvCounter = findViewById(R.id.tvCounter);
         tvCounter.setText("0");
+
+        Button toSoundboard = findViewById(R.id.toSoundboardButton);
+        Button toSettings = findViewById(R.id.toSettingsButton);
+        toSoundboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchSoundboard();
+            }
+        });
+
+        toSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchSettings();
+            }
+        });
     }
+
 
 
     @Override
@@ -60,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_soundboard:
                 launchSoundboard();
                 break;
+
 
 
         }
@@ -87,13 +110,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void goToSoundBoard(View view) {
-        Intent intent = new Intent(this,SoundBoardActivity.class);
-        startActivityForResult(intent,BOOL_REQUEST);
     }
 
-    public void goToSettings(View view) {
-        Intent intent = new Intent(this, SettingsActivity.class);
-        startActivityForResult(intent,BOOL_REQUEST);
-    }
-}

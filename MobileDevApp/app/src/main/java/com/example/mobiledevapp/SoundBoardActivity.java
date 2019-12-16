@@ -1,14 +1,20 @@
 package com.example.mobiledevapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 
 
 public class SoundBoardActivity extends AppCompatActivity {
@@ -71,7 +77,6 @@ public class SoundBoardActivity extends AppCompatActivity {
         SoundView.setAdapter(SoundAdapter);
 
 
-
     }
 
     @Override
@@ -83,9 +88,42 @@ public class SoundBoardActivity extends AppCompatActivity {
     @Override
     public boolean onSupportNavigateUp() {
         Intent replyIntent = new Intent();
-        replyIntent.putExtra(EXTRA_REPLY,listOptions);
-        setResult(RESULT_OK,replyIntent);
+        replyIntent.putExtra(EXTRA_REPLY, listOptions);
+        setResult(RESULT_OK, replyIntent);
         finish();
         return true;
     }
+
+   /* @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuItem menuItem = menu.findItem(R.id.search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
+        return true;
+    }*/
+
+
+
+    /*@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuItem item = menu.findItem(R.id.search);
+        SearchView searchView = (SearchView) item.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+
+
+        return super.onCreateOptionsMenu(menu);
+    }*/
+
+
 }
