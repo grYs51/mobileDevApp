@@ -29,6 +29,7 @@ public class SoundBoardActivity extends AppCompatActivity {
 
         Toolbar myToolbar = findViewById(R.id.toolbar_soundboard); //Shows name of app in the toolbar.
         setSupportActionBar(myToolbar);
+
         assert getSupportActionBar() != null;   //null check
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

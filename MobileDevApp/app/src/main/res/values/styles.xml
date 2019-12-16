@@ -1,14 +1,8 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
 
-
+    <style name="AppTheme.Base" parent="Theme.AppCompat.DayNight.DarkActionBar">
     </style>
 
-    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/Background</item>
-        <item name="colorPrimaryDark">@color/Grijs</item>
-        <item name="colorAccent">@color/AccentKleur</item>
-    </style>
 
 </resources>

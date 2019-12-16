@@ -2,9 +2,6 @@ package com.example.mobiledevapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.preference.PreferenceManager;
-
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -109,5 +106,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,SoundBoardActivity.class);
         intent.putExtra(EXTRA_MESSAGE,listOptions);
         startActivityForResult(intent, BOOL_REQUEST);
+        logEvent("LaunchSoundboard");
     }
 }

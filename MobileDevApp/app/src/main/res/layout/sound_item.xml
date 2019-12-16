@@ -25,8 +25,8 @@
         android:gravity="center_horizontal"
         android:textAlignment="gravity"
         android:textSize="13sp"
-        android:textColor="@color/Grijs"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"/>
 
 
 </RelativeLayout>

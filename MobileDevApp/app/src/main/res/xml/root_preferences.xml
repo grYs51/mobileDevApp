@@ -34,6 +34,7 @@
     <PreferenceCategory app:title="@string/sync_header">
 
         <SwitchPreferenceCompat
+
             android:id="@+id/DarkThemeSwitch"
             app:key="darkTheme"
             app:summaryOff="@string/attachment_summary_off"
