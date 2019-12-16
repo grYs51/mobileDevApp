@@ -1,16 +1,16 @@
 package com.example.mobiledevapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.widget.SearchView;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.inputmethod.EditorInfo;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.List;
 public class SoundBoardActivity extends AppCompatActivity {
 
     public boolean[] listOptions;
-    public static final String EXTRA_REPLY = "com.example.smalltalkapp.extra.REPLY";
+    public static final String EXTRA_REPLY = "com.example.mobiledevapp.extra.REPLY";
 
     ArrayList<SoundObject> soundList = new ArrayList<SoundObject>();
 
@@ -37,7 +37,6 @@ public class SoundBoardActivity extends AppCompatActivity {
         setSupportActionBar(myToolbar);
         assert getSupportActionBar() != null;   //null check
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         List<String> nameList = Arrays.asList(getResources().getStringArray(R.array.soundNames)); //Array van button namen opvragen
 
         SoundObject[] soundItems = {
@@ -94,20 +93,14 @@ public class SoundBoardActivity extends AppCompatActivity {
         return true;
     }
 
-   /* @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        MenuItem menuItem = menu.findItem(R.id.search);
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
-        return true;
-    }*/
+    @Override
+    public  boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_soundboard,menu);
 
+        MenuItem searchItem = menu.findItem(R.id.action_searh);
+        androidx.appcompat.widget.SearchView searchView = (androidx.appcompat.widget.SearchView) searchItem.getActionView();
 
-
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        MenuItem item = menu.findItem(R.id.search);
-        SearchView searchView = (SearchView) item.getActionView();
+        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -117,13 +110,13 @@ public class SoundBoardActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                SoundAdapter.getFilter().filter(newText);
                 return false;
             }
         });
+        return true;
+    }
 
-
-        return super.onCreateOptionsMenu(menu);
-    }*/
 
 
 }
