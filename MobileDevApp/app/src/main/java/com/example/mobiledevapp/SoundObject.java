@@ -5,18 +5,18 @@ public class SoundObject {
     private String ItemName;
     private Integer ItemID;
 
-    public SoundObject(String itemName, Integer itemID){
+    public SoundObject(String itemName, Integer itemID) {
         this.ItemID = itemID;
         this.ItemName = itemName;
     }
 
     public String getItemName() {
+
         return ItemName;
     }
-    public Integer getItemID(){
+
+    public Integer getItemID() {
+
         return ItemID;
     }
-
-
-
 }

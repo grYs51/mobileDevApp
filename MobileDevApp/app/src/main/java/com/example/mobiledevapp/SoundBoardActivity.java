@@ -2,10 +2,13 @@ package com.example.mobiledevapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.os.Bundle;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -28,6 +31,7 @@ public class SoundBoardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_soundboard);
 
         Toolbar myToolbar = findViewById(R.id.toolbar_soundboard); //Shows name of app in the toolbar.
+        myToolbar.setTitleTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimaryDark));
         setSupportActionBar(myToolbar);
 
         assert getSupportActionBar() != null;   //null check
@@ -50,7 +54,6 @@ public class SoundBoardActivity extends AppCompatActivity {
         SoundView.setAdapter(SoundAdapter);
 
 
-
     }
 
     @Override
@@ -62,8 +65,8 @@ public class SoundBoardActivity extends AppCompatActivity {
     @Override
     public boolean onSupportNavigateUp() {
         Intent replyIntent = new Intent();
-        replyIntent.putExtra(EXTRA_REPLY,listOptions);
-        setResult(RESULT_OK,replyIntent);
+        replyIntent.putExtra(EXTRA_REPLY, listOptions);
+        setResult(RESULT_OK, replyIntent);
         finish();
         return true;
     }

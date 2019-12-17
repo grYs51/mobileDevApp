@@ -17,50 +17,50 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
 
     private ArrayList<SoundObject> soundObjects;
 
-    public SoundboardRecyclerAdapter(ArrayList<SoundObject> SoundObjects){
+    public SoundboardRecyclerAdapter(ArrayList<SoundObject> SoundObjects) {
         this.soundObjects = SoundObjects;
     }
 
     @Override
-    public SoundBoardViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+    public SoundBoardViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-    View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.sound_item,null);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.sound_item, null);
 
-    return new SoundBoardViewHolder(itemView);
-}
+        return new SoundBoardViewHolder(itemView);
+    }
 
-@Override
-    public void onBindViewHolder(SoundBoardViewHolder holder, int position){
+    @Override
+    public void onBindViewHolder(SoundBoardViewHolder holder, int position) {
 
         final SoundObject tempObject = soundObjects.get(position);
         final Integer soundID = tempObject.getItemID();
 
 
         holder.itemTextView.setText(tempObject.getItemName());
-        holder.itemView.setOnClickListener(new View.OnClickListener(){
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
 
-                EventHandlerClass.startMediaPlayer(v,soundID);
+                EventHandlerClass.startMediaPlayer(v, soundID);
                 MainActivity.saveCount();
 
             }
         });
-}
-
-@Override
-    public  int getItemCount(){
-
-    return soundObjects.size();
-}
-
-public class SoundBoardViewHolder extends RecyclerView.ViewHolder {
-
-    TextView itemTextView;
-
-    public SoundBoardViewHolder(View itemView) {
-        super(itemView);
-        itemTextView = itemView.findViewById(R.id.TextViewItem);
     }
-}
+
+    @Override
+    public int getItemCount() {
+
+        return soundObjects.size();
+    }
+
+    public class SoundBoardViewHolder extends RecyclerView.ViewHolder {
+
+        TextView itemTextView;
+
+        public SoundBoardViewHolder(View itemView) {
+            super(itemView);
+            itemTextView = itemView.findViewById(R.id.TextViewItem);
+        }
+    }
 }

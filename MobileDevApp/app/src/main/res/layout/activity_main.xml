@@ -16,9 +16,7 @@
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-
-        />
+        app:theme="@style/ToolbarTheme"/>
 
     <TextView
         android:id="@+id/tvCounter"
@@ -28,8 +26,8 @@
         android:layout_marginStart="73dp"
         android:layout_marginBottom="116dp"
         android:layout_toEndOf="@+id/textView2"
-        android:textSize="30sp"
         android:textColor="@color/colorAccent"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/my_toolbar"
         app:layout_constraintHorizontal_bias="0.918"

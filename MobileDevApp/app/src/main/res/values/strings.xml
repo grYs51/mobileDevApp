@@ -18,15 +18,11 @@
     <!-- Sync Preferences -->
 
     <string name="attachment_title">Dark mode</string>
-    <string name="attachment_summary_on">Dark Mode On
-    </string>
+    <string name="attachment_summary_on">Dark Mode On</string>
     <string name="attachment_summary_off">Dark Mode Off</string>
-
     <string name="action_soundboard" type="id">Soundboard</string>
     <string name="reset">Reset</string>
     <string name="darkTheme">darktheme</string>
-
-
 
     <!-- Naam van buttons -->
     <string-array name="soundNames">
