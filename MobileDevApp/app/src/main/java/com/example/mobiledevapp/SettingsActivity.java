@@ -35,6 +35,8 @@ public class SettingsActivity extends AppCompatActivity {
                 .replace(R.id.settings, new SettingsFragment())
                 .commit();
 
+        setTheme(R.style.SettingsFragmentStyle);
+
 
         //Toolbar
         Toolbar myToolbar = findViewById(R.id.toolbar_settings); //Shows name of app in the toolbar.
