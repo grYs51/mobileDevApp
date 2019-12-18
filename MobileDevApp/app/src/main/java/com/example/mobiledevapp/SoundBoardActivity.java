@@ -66,8 +66,8 @@ public class SoundBoardActivity extends AppCompatActivity {
 
 
         };
-
         soundList.addAll(Arrays.asList(soundItems)); //items van hierboven in de lijst plaatsen
+        SoundAdapter.CopyList();
 
 
         SoundView = findViewById(R.id.soundboardRecyclerView);

@@ -23,12 +23,18 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
         this.soundObjects = SoundObjects;
     }
 
+    public void CopyList(){
+        this.soundObjectsCopy = new ArrayList<>(soundObjects);
+
+    }
+
+
     @Override
     public SoundBoardViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.sound_item, null);
-this.soundObjectsCopy = new ArrayList<>(soundObjects);
         return new SoundBoardViewHolder(itemView);
+
     }
 
     @Override
@@ -36,6 +42,7 @@ this.soundObjectsCopy = new ArrayList<>(soundObjects);
 
         final SoundObject tempObject = soundObjects.get(position);
         final Integer soundID = tempObject.getItemID();
+
 
 
         holder.itemTextView.setText(tempObject.getItemName());
@@ -67,7 +74,6 @@ this.soundObjectsCopy = new ArrayList<>(soundObjects);
     }
 
 
-
     //ZOEKFUNCTIE
     @Override
     public Filter getFilter() {
@@ -83,6 +89,7 @@ this.soundObjectsCopy = new ArrayList<>(soundObjects);
             Log.d("constraintText", constraint.toString().toLowerCase().trim());
             if (constraint == null || constraint.length() == 0) { //Constraint is de search query van de gebruiker.
                 filteredList.addAll(soundObjectsCopy);
+
             } else {
                 String filterPattern = constraint.toString().toLowerCase().trim();
                 for (SoundObject item : soundObjectsCopy) {
@@ -103,10 +110,13 @@ this.soundObjectsCopy = new ArrayList<>(soundObjects);
         protected void publishResults(CharSequence constraint, FilterResults results) {
             soundObjects.clear();
             soundObjects.addAll((List) results.values);
+
             notifyDataSetChanged();
 
         }
     };
+
+
 
 
 
