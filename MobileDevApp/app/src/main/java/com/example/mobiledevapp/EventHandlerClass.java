@@ -10,9 +10,9 @@ public class EventHandlerClass {
     private static final String LOG_TAG = "EVENTHANDLER";
     private static MediaPlayer mp;
 
-    public static void startMediaPlayer(View view, Integer soundID){
-        try{
-            if (soundID != null){
+    public static void startMediaPlayer(View view, Integer soundID) {
+        try {
+            if (soundID != null) {
                 if (mp != null)
                     mp.reset();
 
@@ -20,14 +20,14 @@ public class EventHandlerClass {
                 mp.start();
             }
 
-        } catch (Exception e){
+        } catch (Exception e) {
             Log.e(LOG_TAG, "Initialiseren van mediaplayer mislukt" + e.getMessage());
         }
     }
 
-    public static void releaseMediaPlayer(){
+    public static void releaseMediaPlayer() {
 
-        if (mp != null){
+        if (mp != null) {
             mp.release();
             mp = null;
         }

@@ -1,14 +1,15 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+    <style name="AppTheme.Base" parent="Theme.AppCompat.DayNight.DarkActionBar"></style>
 
-
+    <style name="SettingsFragmentStyle">
+        <item name="android:textColorSecondary">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
-    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/Background</item>
-        <item name="colorPrimaryDark">@color/Grijs</item>
-        <item name="colorAccent">@color/AccentKleur</item>
+    <style name="ToolbarTheme" parent="AppTheme.Base">
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
+
 
 </resources>

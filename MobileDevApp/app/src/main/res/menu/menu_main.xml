@@ -4,11 +4,11 @@
 
     <item
         android:id="@+id/action_settings"
-        app:showAsAction="never"
-        android:title="@string/action_settings" />
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/action_soundboard"
-        app:showAsAction="never"
-        android:title="Soundboard" />
+        android:title="Soundboard"
+        app:showAsAction="never" />
 </menu>
