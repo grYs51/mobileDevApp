@@ -23,6 +23,12 @@
     <string name="action_soundboard" type="id">Soundboard</string>
     <string name="reset">Reset</string>
     <string name="darkTheme">darktheme</string>
+    <string name="logo">logo</string>
+    <string name="naar_soundboard">Naar Soundboard</string>
+    <string name="x_afgespeeld">Aantal geluiden afgespeeld:</string>
+    <string name="instellingen">instellingen</string>
+    <string name="zoeken">Zoeken</string>
+    <string name="soundboard">Soundboard</string>
 
     <!-- Naam van buttons -->
     <string-array name="soundNames">
