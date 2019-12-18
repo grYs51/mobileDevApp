@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.inputmethod.EditorInfo;
@@ -76,6 +77,13 @@ public class SoundBoardActivity extends AppCompatActivity {
         SoundView.setAdapter(SoundAdapter);
 
 
+        //DEBUG
+        for (SoundObject item : soundList){
+            //LOG DE NAAM VAN DE SOUNDS
+            Log.d("soundList item naam",item.getItemName());
+
+        }
+
     }
 
     @Override
@@ -100,7 +108,7 @@ public class SoundBoardActivity extends AppCompatActivity {
         MenuItem searchItem = menu.findItem(R.id.action_searh);
         androidx.appcompat.widget.SearchView searchView = (androidx.appcompat.widget.SearchView) searchItem.getActionView();
 
-        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE); //Omdat onze waarden toch automatisch updaten hebben we het vergrootglas in het toetsenbord niet meer nodig, daarom veranderen we het icoontje op het toetsenbord naar een vinkje
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -111,6 +119,7 @@ public class SoundBoardActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextChange(String newText) {
                 SoundAdapter.getFilter().filter(newText);
+
                 return false;
             }
         });

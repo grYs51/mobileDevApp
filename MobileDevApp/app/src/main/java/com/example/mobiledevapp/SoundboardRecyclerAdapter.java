@@ -1,5 +1,7 @@
 package com.example.mobiledevapp;
 
+import android.util.EventLog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,14 +21,13 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
 
     public SoundboardRecyclerAdapter(ArrayList<SoundObject> SoundObjects) {
         this.soundObjects = SoundObjects;
-        this.soundObjectsCopy = new ArrayList<>(soundObjects); //kopie maken van de eerste lijst.
     }
 
     @Override
     public SoundBoardViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.sound_item, null);
-
+this.soundObjectsCopy = new ArrayList<>(soundObjects);
         return new SoundBoardViewHolder(itemView);
     }
 
@@ -65,9 +66,12 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
         }
     }
 
+
+
     //ZOEKFUNCTIE
     @Override
     public Filter getFilter() {
+
         return exampleFilter;
     }
 
@@ -76,14 +80,17 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
         protected FilterResults performFiltering(CharSequence constraint) { //wordt uitgevoerd in de achtergrond zodat de app niet blijft vasthangen
             List<SoundObject> filteredList = new ArrayList<>();
 
-            if (constraint == null || constraint.length() == 0) {
-                filteredList.addAll(soundObjects);
+            Log.d("constraintText", constraint.toString().toLowerCase().trim());
+            if (constraint == null || constraint.length() == 0) { //Constraint is de search query van de gebruiker.
+                filteredList.addAll(soundObjectsCopy);
             } else {
                 String filterPattern = constraint.toString().toLowerCase().trim();
-
                 for (SoundObject item : soundObjectsCopy) {
+
+                    Log.d("itemNaam", item.getItemName().toLowerCase()); //DEBUG
                     if (item.getItemName().toLowerCase().contains(filterPattern)) {
                         filteredList.add(item);
+
                     }
                 }
             }
@@ -100,6 +107,11 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
 
         }
     };
+
+
+
+
+
 
 
 }
