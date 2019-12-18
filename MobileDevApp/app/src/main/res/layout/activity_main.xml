@@ -78,6 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toSoundboardButton"
         app:theme="@style/ToolbarTheme" />
 
+
     <ImageView
         android:id="@+id/imageLogo"
         android:layout_width="wrap_content"
