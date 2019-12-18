@@ -8,19 +8,6 @@
     android:background="@color/colorBackground"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/toSettingsButton"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_below="@+id/toSoundboardButton"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="199dp"
-        android:text="@string/instellingen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toSoundboardButton" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -36,7 +23,6 @@
         android:id="@+id/textView2"
         android:layout_width="100dp"
         android:layout_height="38dp"
-
         android:layout_alignParentBottom="true"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -62,15 +48,44 @@
     <Button
         android:id="@+id/toSoundboardButton"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/imageLogo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="82dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="408dp"
         android:text="@string/naar_soundboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo"
+        app:theme="@style/ToolbarTheme"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
+
+
+    <Button
+        android:id="@+id/toSettingsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="353dp"
+        android:text="@string/instellingen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/toSoundboardButton"
+        app:theme="@style/ToolbarTheme"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
 
     <ImageView
         android:id="@+id/imageLogo"
