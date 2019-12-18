@@ -39,10 +39,32 @@ public class SoundBoardActivity extends AppCompatActivity {
 
         List<String> nameList = Arrays.asList(getResources().getStringArray(R.array.soundNames)); //Array van button namen opvragen
 
-        SoundObject[] soundItems = {new SoundObject(nameList.get(0), R.raw.audio01),
+        SoundObject[] soundItems = {
+                new SoundObject(nameList.get(0), R.raw.audio01),
                 new SoundObject(nameList.get(1), R.raw.audio02),
                 new SoundObject(nameList.get(2), R.raw.audio03),
-                new SoundObject(nameList.get(3), R.raw.audio04)};
+                new SoundObject(nameList.get(3), R.raw.audio04),
+                new SoundObject(nameList.get(4), R.raw.deeznuts),
+                new SoundObject(nameList.get(5), R.raw.gotchabitch),
+                new SoundObject(nameList.get(6), R.raw.gtavwastedbusted),
+                new SoundObject(nameList.get(7), R.raw.idontgiveaf),
+                new SoundObject(nameList.get(8), R.raw.illuminaticonfirmed),
+                new SoundObject(nameList.get(9), R.raw.leeroyjenkins),
+                new SoundObject(nameList.get(10), R.raw.mlghorns),
+                new SoundObject(nameList.get(11), R.raw.ohbabyatripple),
+                new SoundObject(nameList.get(12), R.raw.suprisemotherfcker),
+                new SoundObject(nameList.get(13), R.raw.tadaah),
+                new SoundObject(nameList.get(14), R.raw.youneedtostfu),
+                new SoundObject(nameList.get(15), R.raw.airhornsonata),
+                new SoundObject(nameList.get(16), R.raw.damnsonwheredyouthis),
+                new SoundObject(nameList.get(17), R.raw.hit),
+                new SoundObject(nameList.get(18), R.raw.neverdonethat),
+                new SoundObject(nameList.get(19), R.raw.sanic),
+                new SoundObject(nameList.get(20), R.raw.shotsfired),
+                new SoundObject(nameList.get(21), R.raw.wow),
+
+
+        };
 
         soundList.addAll(Arrays.asList(soundItems)); //items van hierboven in de lijst plaatsen
 
