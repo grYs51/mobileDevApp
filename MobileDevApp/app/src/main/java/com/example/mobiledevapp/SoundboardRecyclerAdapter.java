@@ -1,8 +1,5 @@
 package com.example.mobiledevapp;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.util.EventLog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,7 +24,7 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
         this.soundObjects = SoundObjects;
     }
 
-    public void CopyList(){
+    public void CopyList() {
         this.soundObjectsCopy = new ArrayList<>(soundObjects);
 
     }
@@ -47,7 +45,6 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
         final Integer soundID = tempObject.getItemID();
 
 
-
         holder.itemTextView.setText(tempObject.getItemName());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +52,8 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
 
                 EventHandlerClass.startMediaPlayer(v, soundID);
                 MainActivity.saveCount();
+
+
 
             }
         });
@@ -115,16 +114,8 @@ public class SoundboardRecyclerAdapter extends RecyclerView.Adapter<SoundboardRe
             soundObjects.addAll((List) results.values);
 
             notifyDataSetChanged();
-
         }
     };
-
-
-
-
-
-
-
 
 
 }

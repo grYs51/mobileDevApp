@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
-import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,15 +13,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.inputmethod.EditorInfo;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static com.example.mobiledevapp.R.id.ImageViewItem;
 
 
 public class SoundBoardActivity extends AppCompatActivity {
@@ -40,8 +33,6 @@ public class SoundBoardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_soundboard);
-
-
 
         Toolbar myToolbar = findViewById(R.id.toolbar_soundboard); //Shows name of app in the toolbar.
         myToolbar.setTitleTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimaryDark));
@@ -103,9 +94,7 @@ public class SoundBoardActivity extends AppCompatActivity {
                 new SoundObject(nameList.get(48), R.raw.thatwaslegitness),
                 new SoundObject(nameList.get(49), R.raw.hitmarkerspam),
                 new SoundObject(nameList.get(50), R.raw.headshot),
-
-
-
+                
         };
         soundList.addAll(Arrays.asList(soundItems)); //items van hierboven in de lijst plaatsen
         SoundAdapter.CopyList();
@@ -116,7 +105,6 @@ public class SoundBoardActivity extends AppCompatActivity {
         SoundLayoutManager = new GridLayoutManager(this, 3);
         SoundView.setLayoutManager(SoundLayoutManager);
         SoundView.setAdapter(SoundAdapter);
-
 
         //DEBUG
         for (SoundObject item : soundList){
