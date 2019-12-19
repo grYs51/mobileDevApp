@@ -16,6 +16,7 @@
         android:elevation="4dp"
         android:navigationIcon="@drawable/ic_return"
         app:layout_constraintTop_toTopOf="parent"
+        android:icon="@drawable/ic_search_black_24dp"
         app:theme="@style/ToolbarTheme" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -23,7 +24,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar_soundboard"
-        android:id="@+id/soundboardRecyclerView"
         />
 
 </RelativeLayout>
