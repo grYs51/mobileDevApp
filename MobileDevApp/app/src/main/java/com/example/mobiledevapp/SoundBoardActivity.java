@@ -80,8 +80,12 @@ public class SoundBoardActivity extends AppCompatActivity {
                 new SoundObject(nameList.get(42), R.raw.watchur),
                 new SoundObject(nameList.get(43), R.raw.whatrthose),
                 new SoundObject(nameList.get(44), R.raw.whyyou),
-                //new SoundObject(nameList.get(44), R.raw.),
-                //new SoundObject(nameList.get(45), R.raw.),
+                new SoundObject(nameList.get(45), R.raw.damndaniel),
+                new SoundObject(nameList.get(46), R.raw.heneedssomemilk),
+                new SoundObject(nameList.get(47), R.raw.itwasatthismoment),
+                new SoundObject(nameList.get(48), R.raw.thatwaslegitness),
+                new SoundObject(nameList.get(49), R.raw.hitmarkerspam),
+                new SoundObject(nameList.get(50), R.raw.headshot),
 
 
 
