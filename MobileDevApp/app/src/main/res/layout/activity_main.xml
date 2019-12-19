@@ -8,6 +8,7 @@
     android:background="@color/colorBackground"
     tools:context=".MainActivity">
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
@@ -19,29 +20,83 @@
         app:theme="@style/ToolbarTheme"/>
 
     <TextView
-        android:id="@+id/tvCounter"
-        android:layout_width="30dp"
-        android:layout_height="38dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="73dp"
-        android:layout_marginBottom="116dp"
-        android:layout_toEndOf="@+id/textView2"
-        android:textColor="@color/colorAccent"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/my_toolbar"
-        app:layout_constraintHorizontal_bias="0.918"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="100dp"
         android:layout_height="38dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="117dp"
-        android:text="Aantal sounds played:"
-        android:textColor="@color/colorAccent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="29dp"
+        android:text="@string/x_afgespeeld"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvCounter" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/colorAccent"/>
+
+    <TextView
+        android:id="@+id/tvCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+
+    <Button
+        android:id="@+id/toSoundboardButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageLogo"
+
+
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="28dp"
+        android:text="@string/naar_soundboard"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo"
+        app:theme="@style/ToolbarTheme" />
+
+    <Button
+        android:id="@+id/toSettingsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toSoundboardButton"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/instellingen"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toSoundboardButton"
+        app:theme="@style/ToolbarTheme" />
+
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="83dp"
+        android:layout_marginLeft="83dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginRight="82dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/soundboard_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
 
 </RelativeLayout>

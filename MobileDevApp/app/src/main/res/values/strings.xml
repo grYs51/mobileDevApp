@@ -23,6 +23,12 @@
     <string name="action_soundboard" type="id">Soundboard</string>
     <string name="reset">Reset</string>
     <string name="darkTheme">darktheme</string>
+    <string name="logo">logo</string>
+    <string name="naar_soundboard">Naar Soundboard</string>
+    <string name="x_afgespeeld">Aantal geluiden afgespeeld:</string>
+    <string name="instellingen">instellingen</string>
+    <string name="zoeken">Zoeken</string>
+    <string name="soundboard">Soundboard</string>
 
     <!-- Naam van buttons -->
     <string-array name="soundNames">
@@ -30,5 +36,53 @@
         <item>Jump</item>
         <item>Kendrick</item>
         <item>OOF</item>
+        <item>Deez Nuts</item>
+        <item>Gotcha Bitch</item>
+        <item>GTA V WastedBusted</item>
+        <item>I Don\'t give a fck</item>
+        <item>Illuminati Confirmed</item>
+        <item>Leeroy Jenkis</item>
+        <item>MLG Horn</item>
+        <item>OH Baby a triple</item>
+        <item>Surprise MotherFcker</item>
+        <item>Tadaah</item>
+        <item>You need to STFU</item>
+        <item>Airhorn Sonata</item>
+        <item>Damn son where did you find this</item>
+        <item>hit</item>
+        <item>Never Done that</item>
+        <item>Sanic</item>
+        <item>Shots Fired</item>
+        <item>Wow</item>
+        <item>2Pac the Tank Engine</item>
+        <item>Kanye the Tank Engine</item>
+        <item>KFC Illuminati</item>
+        <item>The price is right</item>
+        <item>WTF</item>
+        <item>MLG Century Fox INTRO</item>
+        <item>A Small Loan Of A Million Dollars</item>
+        <item>You think you\'re f\*cking funny</item>
+        <item>5 inches deep in your mom</item>
+        <item>Bye Have a Great Time Sound Effect</item>
+        <item>hello darkness my old friend</item>
+        <item>I can\'t tie my shoes but I can fuck your bitch</item>
+        <item>Im 11 So Shut the Fuck Up Thug Life</item>
+        <item>mlg voice</item> <!-- this needs to get fixed-->
+        <item>Nice</item>
+        <item>That\'s Racist</item>
+        <item>No Nigga</item>
+        <item>thug life sound effect 1</item>
+        <item>thug life sound effect 2</item>
+        <item>Universal Intro MLG Airhorn Remix</item>
+        <item>Watch ur Profanity</item>
+        <item>What Are Those</item>
+        <item>Why you always lying</item>
+        <item>Damn Daniel</item>
+        <item>He needs some milk</item>
+        <item>It was at this moment Nathan knew</item>
+        <item>That was legitness</item>
+        <item>Hit spasm</item>
+        <item>Headshot</item>
+
     </string-array>
 </resources>

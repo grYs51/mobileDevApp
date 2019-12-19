@@ -4,13 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+import androidx.core.view.MenuItemCompat;
 
+import android.widget.Button;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -57,7 +60,23 @@ public class MainActivity extends AppCompatActivity {
         tvCounter = findViewById(R.id.tvCounter);
         tvCounter.setText(Integer.toString(counter));
 
+        Button toSoundboard = findViewById(R.id.toSoundboardButton);
+        Button toSettings = findViewById(R.id.toSettingsButton);
+        toSoundboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchSoundboard();
+            }
+        });
+
+        toSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchSettings();
+            }
+        });
     }
+
 
 
     @Override
@@ -111,4 +130,7 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, BOOL_REQUEST);
         logEvent("LaunchSoundboard");
     }
-}
+
+
+    }
+
