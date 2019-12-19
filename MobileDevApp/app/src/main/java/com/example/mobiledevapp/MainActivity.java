@@ -14,9 +14,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
+
+import static com.example.mobiledevapp.R.id.ImageViewItem;
 
 
 public class MainActivity extends AppCompatActivity {

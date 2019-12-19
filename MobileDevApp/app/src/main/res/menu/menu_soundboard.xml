@@ -6,9 +6,9 @@
     <item android:id="@+id/action_searh"
         android:title="@string/zoeken"
         android:icon="@drawable/ic_search_black_24dp"
+        android:iconTint="@color/colorAccent"
         app:showAsAction="collapseActionView|ifRoom"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
-
          />
 
 

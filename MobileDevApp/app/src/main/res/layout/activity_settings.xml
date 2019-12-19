@@ -16,10 +16,10 @@
             android:background="@color/colorToolbar"
             android:elevation="4dp"
             android:navigationIcon="@drawable/ic_return"
-            android:textColor="@color/colorToolbar"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:layout_constraintTop_toTopOf="parent"
-            app:theme="@style/ToolbarTheme" />
+
+
+             />
 
     </FrameLayout>
 </LinearLayout>
