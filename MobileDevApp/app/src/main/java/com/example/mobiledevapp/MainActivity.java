@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         counter = settings.getInt("counter", 0);
 
         tvCounter = findViewById(R.id.tvCounter);
-        tvCounter.setText(Integer.toString(counter));
+        tvCounter.setText(Integer.toString(settings.getInt("counter", 0)));
 
         Button toSoundboard = findViewById(R.id.toSoundboardButton);
         Button toSettings = findViewById(R.id.toSettingsButton);
